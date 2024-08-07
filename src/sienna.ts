@@ -2,6 +2,12 @@ import { getSettings, saveSettings } from "./storage";
 import runAccessibility from "./views/menu/runAccessibility";
 import { renderWidget } from "./views/widget/widget"
 
+declare global {
+    interface Window {
+        __SiennaInit:any;
+    }
+}
+
 export interface ISeinnaSettings {
     lang?: any,
     position?: any | 'bottom-right' | 'bottom-left' | 'top-left' | 'top-right' | 'center-left' | 'center-right',

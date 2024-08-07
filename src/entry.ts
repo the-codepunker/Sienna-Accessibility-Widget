@@ -41,3 +41,5 @@ function checkReadyState() {
 // Use readystatechange for async support
 document.addEventListener("readystatechange", checkReadyState);
 
+// create way to call sienna manually
+window.__SiennaInit = initializeSienna;
