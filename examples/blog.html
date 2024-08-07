@@ -337,7 +337,7 @@ h1, h2, h3, h4, h5, h6 {
         <main class="container">
             <div class="p-4 p-md-5 mb-4 rounded text-bg-dark">
                 <div class="col-md-6 px-0">
-                    <h1 class="display-4 fst-italic">Title of a longer featured blog post</h1>
+                    <h1><a href="#" id="inittrigger" class="display-4 fst-italic">Click me to enable Sienna</a></h1>
                     <p class="lead my-3">Multiple lines of text that form the lede, informing new readers quickly and efficiently about what’s most interesting in this post’s contents.</p>
                     <p class="lead mb-0"><a href="https://getbootstrap.com/docs/5.3/examples/blog/#" class="text-white fw-bold">Continue reading...</a></p>
                 </div>
@@ -584,5 +584,13 @@ h1, h2, h3, h4, h5, h6 {
         </footer>
 
         <script src="../dist/sienna.min.js"></script>
+        <script>
+            document.getElementById('inittrigger').addEventListener('click', function (e) {
+                e.preventDefault();
+                console.log('clicked');
+                let ev = new Event('initsienna');
+                document.dispatchEvent(ev);
+            });
+        </script>
     </body>
 </html>

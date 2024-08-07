@@ -42,4 +42,4 @@ function checkReadyState() {
 document.addEventListener("readystatechange", checkReadyState);
 
 // create way to call sienna manually
-window.__SiennaInit = initializeSienna;
+document.addEventListener("initsienna", checkReadyState);
